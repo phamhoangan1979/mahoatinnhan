@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mã hóa AES-256</title>
+  <link rel="stylesheet" href="style.css"/>
+  <!-- Thư viện CryptoJS -->
+  <script src="https://cdn.jsdelivr.net/npm/crypto-js@4.1.1/crypto-js.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Ứng dụng Mã hóa AES-256</h1>
+
+    <textarea id="inputText" maxlength="300" placeholder="Nhập tin nhắn tiếng Việt (tối đa 300 ký tự)..."></textarea>
+
+    <input type="password" id="secretKey" placeholder="Nhập khóa bí mật (password)" />
+
+    <div class="button-group">
+      <button onclick="encryptAES()">🔐 Mã hóa</button>
+      <button onclick="decryptAES()">🔓 Giải mã</button>
+    </div>
+
+    <textarea id="outputText" placeholder="Kết quả sẽ hiển thị ở đây..." readonly></textarea>
+
+    <div class="button-group">
+      <button onclick="copyToClipboard()">📋 Sao chép</button>
+      <button onclick="saveToFile()">💾 Lưu kết quả</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
